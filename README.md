@@ -4,13 +4,13 @@ This contains a self created dumb way of installing Spark, Hive and Hadoop with 
  
 For UBUNTU
 
-My hsotname - shockWAVE
+My hostname - shockWAVE
 My username - pankaj
 (use the same if you don't have time to change sparrk/hive/hadoop configuration files by yourself)
 
 ## Install openjdk-8-jdk
 
-1. Unzip the highly intuitive named zip file...(I know)...and copy each folder to /opt - (yes even hdfs)
+1. Copy each folder to /opt - (yes even hdfs)
 
 2. copy the last few sections of .bashrc to existing .bashrc (basically to export home)
 
