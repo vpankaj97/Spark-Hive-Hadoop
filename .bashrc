@@ -133,7 +133,6 @@ export HADOOP_HDFS_HOME=$HADOOP_HOME
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-export HADOOP_LOG_DIR=/home/pankaj/.hadooplogs
 
 
 export HIVE_HOME=/opt/apache-hive-3.1.2-bin
