@@ -17,13 +17,14 @@ rm ~/Downloads/apache-hive-3.1.2-bin/lib/guava-19.0.jar
 cp ~/Documents/Spark-Hive-Hadoop/apache-hive-3.1.2-bin/ -r ~/Downloads/
 cp ~/Documents/Spark-Hive-Hadoop/hadoop-3.2.1/ -r ~/Downloads/
 cp ~/Documents/Spark-Hive-Hadoop/spark-2.4.5-bin-hadoop2.7/ -r ~/Downloads/
-cp ~/Documents/Spark-Hive-Hadoop/hdfs -r /opt
+sudo cp ~/Documents/Spark-Hive-Hadoop/hdfs -r /opt
+sudo cp ~/Downloads/apache-hive-3.1.2-bin /opt
+sudo cp ~/Downloads/hadoop-3.2.1 /opt
+sudo cp ~/Downloads/spark-2.4.5-bin-hadoop2.7 /opt
 cp ~/Documents/Spark-Hive-Hadoop/.bashrc ~/
-cp ~/Downloads/apache-hive-3.1.2-bin /opt
-cp ~/Downloads/hadoop-3.2.1 /opt
-cp ~/Downloads/spark-2.4.5-bin-hadoop2.7 /opt
 source ~/.bashrc
 sudo chown pankaj:pankaj -R /opt/apache-hive-3.1.2-bin
 sudo chown pankaj:pankaj -R /opt/hadoop-3.2.1
 sudo chown pankaj:pankaj -R /opt/spark-2.4.5-bin-hadoop2.7
 sudo chown pankaj:pankaj -R /opt/hdfs
+mv ~/Documents/Spark-Hive-Hadoop ~/Documents/gitHUB
