@@ -18,12 +18,11 @@ My username - pankaj
    
 3. From the terminal, RUN:
 
-   3.1 'start-dfs.sh && start-yarn.sh'
+   PreStep - "sudo chown pankaj:pankaj -R ***** " (folders in /opt)   
+   3.1 'hadoop namenode -format;
+      3.1.1 See if hdfs is working now.
+   3.2 'start-dfs.sh && start-yarn.sh'
       3.1.1 See if all services are running using - 'jps'
-      
-   3.2 'hadoop namenode -format;
-      3.2.1 See if hdfs is working now.
-
 
 5. Install VSCODE(preferred by me)
     5.1 Install python version 3.x <3.8 (3.8 doesnt play well with --master yarn) -- I use 3.6.9
