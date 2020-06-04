@@ -28,3 +28,7 @@ sudo chown pankaj:pankaj -R /opt/hadoop-3.2.1
 sudo chown pankaj:pankaj -R /opt/spark-2.4.5-bin-hadoop2.7
 sudo chown pankaj:pankaj -R /opt/hdfs
 mv ~/Documents/Spark-Hive-Hadoop ~/Documents/gitHUB
+pip3 install findspark
+hdfs dfs -mkdir /public
+hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db /public
+hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db_json /public
