@@ -3,7 +3,19 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install openjdk-8-jdk
 sudo apt install python2
+sudo apt-get install -y build-essential checkinstall 
 sudo apt install python3-pip
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+sudo tar xzf Python-3.6.9.tgz
+cd Python-3.6.9
+sudo ./configure --enable-optimizations
+sudo make altinstall
+sudo apt-get install -y python3-distutils python3-testresources
+cd ~/
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py
 cd ~/Documents
 git clone https://github.com/vpankaj97/Spark-Hive-Hadoop.git
 cd ~/Downloads
@@ -21,7 +33,8 @@ sudo cp ~/Documents/Spark-Hive-Hadoop/hdfs -r /opt
 sudo cp ~/Downloads/apache-hive-3.1.2-bin -r /opt
 sudo cp ~/Downloads/hadoop-3.2.1 -r /opt
 sudo cp ~/Downloads/spark-2.4.5-bin-hadoop2.7 -r /opt
-cp ~/Documents/Spark-Hive-Hadoop/.bashrc ~/
+cp ~/Documents/Spark-Hive-Hadoop/.bashrc20_04 ~/
+mv ~/.bashrc20_04 ~/.bashrc 
 source ~/.bashrc
 sudo chown pankaj:pankaj -R /opt/apache-hive-3.1.2-bin
 sudo chown pankaj:pankaj -R /opt/hadoop-3.2.1
