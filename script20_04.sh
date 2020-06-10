@@ -13,15 +13,15 @@ cd Python-3.6.9
 sudo ./configure --enable-optimizations
 sudo make altinstall
 sudo apt-get install -y python3-distutils python3-testresources
-cd ~/
+cd /home/pankaj/
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3.6 get-pip.py
-cd ~/Documents
+cd /home/pankaj/Documents
 git clone https://github.com/vpankaj97/Spark-Hive-Hadoop.git
-cd ~/Downloads
-#wget https://mirrors.estointernet.in/apache/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
-#wget http://apachemirror.wuchna.com/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
-#wget http://apachemirror.wuchna.com/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+cd /home/pankaj/Downloads
+wget https://mirrors.estointernet.in/apache/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+wget http://apachemirror.wuchna.com/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+wget http://apachemirror.wuchna.com/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 tar xzvf spark-2.4.5-bin-hadoop2.7.tgz
 tar xzvf apache-hive-3.1.2-bin.tar.gz
 tar xzvf hadoop-3.2.1.tar.gz
@@ -46,6 +46,10 @@ sudo apt install ssh
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
+cd /home/pankaj/Downloads
+rm -R spark-2.4.5-bin-hadoop2.7.tgz
+rm -R apache-hive-3.1.2-bin.tar.gz
+rm -R hadoop-3.2.1.tar.gz
 hadoop namenode -format
 start-dfs.sh
 start-yarn.sh
