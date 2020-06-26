@@ -1,29 +1,9 @@
-sudo apt update
-sudo apt upgrade
-sudo apt install git
-sudo apt install openjdk-8-jdk
-sudo apt install python2
-
-
-
-
 sudo pacman -S openssh 
 sudo systemctl enable sshd.service
-sudo systemctl start sshd.service
+sudo systemctl  sshd.service
 
-
-sudo apt-get install -y build-essential checkinstall 
-sudo apt install python3-pip
-sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-cd /usr/src
-sudo wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
-sudo tar xzf Python-3.6.9.tgz
-cd Python-3.6.9
-sudo ./configure --enable-optimizations
-sudo make altinstall
-sudo apt-get install -y python3-distutils python3-testresources
-cd /home/pankaj/
-wget https://bootstrap.pypa.io/get-pip.py
+#manually install python3.6.10, openjdk8 from AUR
+cd Spark-Hive-Hadoop
 sudo python3.6 get-pip.py
 cd /home/pankaj/Documents
 git clone https://github.com/vpankaj97/Spark-Hive-Hadoop.git
@@ -60,8 +40,7 @@ rm -R spark-2.4.5-bin-hadoop2.7.tgz
 rm -R apache-hive-3.1.2-bin.tar.gz
 rm -R hadoop-3.2.1.tar.gz
 hadoop namenode -format
-start-dfs.sh
-start-yarn.sh
+start-dfs.sh && start-yarn.sh
 hdfs dfs -mkdir /public
 hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db /public
 hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db_json /public
