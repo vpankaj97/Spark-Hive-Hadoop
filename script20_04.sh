@@ -3,15 +3,6 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install openjdk-8-jdk
 sudo apt install python2
-
-
-
-
-sudo pacman -S openssh 
-sudo systemctl enable sshd.service
-sudo systemctl start sshd.service
-
-
 sudo apt-get install -y build-essential checkinstall 
 sudo apt install python3-pip
 sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
@@ -57,12 +48,12 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 cd /home/pankaj/Downloads
 rm -R spark-2.4.5-bin-hadoop2.7.tgz
-rm -R apache-hive-3.1.2-bin.tar.gz
+rm -R apache-hive-3.1.2-bin.tarpyspark.gz
 rm -R hadoop-3.2.1.tar.gz
 hadoop namenode -format
 start-dfs.sh
 start-yarn.sh
 hdfs dfs -mkdir /public
-hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db /public
-hdfs dfs -put ~/Documents/gitHUB/Spark-Hive-Hadoop/data/retail_db_json /public
+hdfs dfs -put ~/Documents/GitHub/FunProjects/Spark-Hive-Hadoop/data/retail_db /public
+hdfs dfs -put ~/Documents/GitHub/FunProjects/Spark-Hive-Hadoop/data/retail_db_json /public
 pyspark
